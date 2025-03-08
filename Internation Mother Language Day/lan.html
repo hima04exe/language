@@ -1,0 +1,71 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>International Mother Language Day</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" type="text/css" href="lan.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">
+            <img src="favicon.png" alt="Website Logo" class="logo">
+        </a>
+        <h1 class="h1">International Mother Language Day</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="sm.html">Tribute</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="melo.html">Melodies</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Language ▼</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="translateLanguage('en')">English</a>
+                    <a href="#" onclick="translateLanguage('bn')">বাংলা</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1 id="heading">Learn Different Languages & Translate Instantly!</h1>
+    <p id="content">Explore and translate phrases in multiple languages, such as Bangla, Hindi, Urdu, Japanese, Korean, Spanish, French, German, Arabic, Turkish, and Portuguese. Whether you want to learn a new language or quickly translate a phrase, this tool makes it easy and fun. Select a language and start exploring now!</p>
+
+        <div class="container">
+        <h1>Language Translator</h1>
+        
+        <div class="language-select">
+            <label for="fromLanguage">From:</label>
+            <select id="fromLanguage"></select>
+
+            <label for="toLanguage">To:</label>
+            <select id="toLanguage"></select>
+        </div>
+
+        <div class="translation-container">
+            <div class="original-text">
+                <h2>Original</h2>
+                <p id="originalPhrase">Select a phrase</p>
+            </div>
+            <div class="translated-text">
+                <h2>Translation</h2>
+                <p id="translatedPhrase">Translation appears here</p>
+            </div>
+        </div>
+
+        <div id="phrases"></div>
+    </main>
+     
+    <footer>
+        <p>Developed by Humayra | © 2025 All Rights Reserved</p>
+    </footer>
+
+    <script src="lan.js"></script> 
+</body>
+</html>

@@ -1,0 +1,78 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>International Mother Language Day</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" type="text/css" href="sm.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">
+            <img src="favicon.png" alt="Website Logo" class="logo">
+        </a>
+        <h1 class="h1">International Mother Language Day</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="sm.html">Tribute</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="melo.html">Melodies</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Language ▼</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="translateLanguage('en')">English</a>
+                    <a href="#" onclick="translateLanguage('bn')">বাংলা</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2 id="h2">Defend the Language, Honor the Martyrs</h2>
+        <p id="gameIntro">On February 21st, the people of Bangladesh solemnly honor the brave souls who sacrificed their lives in 1952 for the right to speak their mother tongue, Bangla. This day, known as International Mother Language Day, is observed with deep respect and remembrance. People gather at the Shaheed Minar, a monument built to commemorate the Language Movement Martyrs, and place flowers at its altar as a tribute to their immense sacrifice. Now, it's your turn to pay respect. Click the button below to begin and place flowers at the Shaheed Minar in their honor.</p>
+
+        <button id="startGame">Click here to place flowers at the altar of the Shaheed Minar</button>
+
+        <div id="gameArea" style="display: none;">
+            <div id="overlay">
+                <p id="instructionOnImage">Now place flowers at the altar of the Shaheed Minar</p>
+                <p id="warning">[You can place a bouquet of flowers only once]</p>
+            </div>
+            
+            <div id="shahidMinarContainer">
+                <img src="bg9.jpg" id="shahidMinar" alt="Shaheed Minar">
+            </div>
+            <div id="flowersLeft">
+                <img src="f1.png" class="flower" id="flower1" draggable="true">
+                <img src="f2.png" class="flower" id="flower2" draggable="true">
+                <img src="f3.png" class="flower" id="flower3" draggable="true">
+            </div>
+            <div id="flowersRight">
+                <img src="f4.png" class="flower" id="flower4" draggable="true">
+                <img src="f5.png" class="flower" id="flower5" draggable="true">
+                <img src="f6.png" class="flower" id="flower6" draggable="true">
+            </div>
+
+            <div id="altar" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+            <button id="resetGame">Go Back</button>
+        </div>
+
+        <audio id="backgroundSong" loop>
+            <source src="song.MP3" type="audio/mpeg">
+        </audio>
+    </main>
+
+    <footer>
+        <p>Developed by Humayra | © 2025 All Rights Reserved</p>
+    </footer>
+
+    <script src="sm.js"></script> 
+</body>
+</html>
